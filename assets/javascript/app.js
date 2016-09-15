@@ -31,6 +31,8 @@ $("#submit").on("click", function(){
 		dateAdded: firebase.database.ServerValue.TIMESTAMP
 	});
 
+	$("#form").trigger('reset');
+
 		return false;
 });
 
