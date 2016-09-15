@@ -10,3 +10,8 @@
 
   var database = firebase.database();
 
+var name = "";
+var destination = "";
+var frequency = "";
+var arrival = "";
+var minutes = "";
