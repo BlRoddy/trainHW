@@ -23,4 +23,29 @@ $("#submit").on("click", function(){
 	frequency = $("#frequencyInput").val().trim();
 	arrival = $("#firstTrainInput").val().trim();
 
+	database.ref().push({
+		name: name,
+		destination: destination,
+		frequency: frequency,
+		arrival: arrival,
+		dateAdded: firebase.database.ServerValue.TIMESTAMP
+	});
+
+		return false;
+});
+
+
+database.ref().on("child_added", function(snapshot){
+
+	name = (snapshot.val().name);
+	destination = (snapshot.val().destination);
+	frequency = (snapshot.val().frequency);
+	arrival = (snapshot.val().arrival);
+
+	console.log(snapshot.val().name);
+	console.log(snapshot.val().destination);
+	console.log(snapshot.val().frequency);
+	console.log(snapshot.val().arrival);
+
+
 });
