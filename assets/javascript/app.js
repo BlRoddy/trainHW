@@ -15,3 +15,12 @@ var destination = "";
 var frequency = "";
 var arrival = "";
 var minutes = "";
+
+$("#submit").on("click", function(){
+
+	name = $("#trainNameInput").val().trim();
+	destination = $("#destinationInput").val().trim();
+	frequency = $("#frequencyInput").val().trim();
+	arrival = $("#firstTrainInput").val().trim();
+
+});
